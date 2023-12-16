@@ -2,6 +2,7 @@ package com.javap.fjla.controller;
 
 import com.javap.fjla.dto.auth.AuthenticationRequest;
 import com.javap.fjla.dto.auth.AuthenticationResponse;
+import com.javap.fjla.persistance.entity.User;
 import com.javap.fjla.service.auth.AuthenticationService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,14 @@ public class AuthenticationController {
         return ResponseEntity.ok(rsp);
 
     }
+
+    @GetMapping("/profile")
+    public ResponseEntity<User> findMyProfile(){
+        User user = authenticationService.findLoggedInUser();
+        return ResponseEntity.ok(user);
+
+    }
+
+
 
 }

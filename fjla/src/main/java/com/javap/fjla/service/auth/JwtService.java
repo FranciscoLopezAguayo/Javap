@@ -56,7 +56,7 @@ public class JwtService {
 
     private SecretKey generateKey() {
         byte[] passwordDecoded = Decoders.BASE64.decode(SECRET_KEY);
-        System.out.println( new String(passwordDecoded) );
+        System.out.println("AQUII "+ new String(passwordDecoded) );
         return Keys.hmacShaKeyFor(passwordDecoded);
     }
 

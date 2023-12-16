@@ -4,6 +4,7 @@ import com.javap.fjla.dto.RegisteredUser;
 import com.javap.fjla.dto.SaveUser;
 import com.javap.fjla.dto.auth.AuthenticationRequest;
 import com.javap.fjla.dto.auth.AuthenticationResponse;
+import com.javap.fjla.exception.ObjectNotFoundException;
 import com.javap.fjla.persistance.entity.User;
 import com.javap.fjla.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,4 +86,13 @@ public class AuthenticationService {
 
     }
 
+    public User findLoggedInUser() {
+
+        Authentication auth =
+                (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+
+        String username = (String) auth.getPrincipal();
+        return userService.findOneByUsername(username)
+                .orElseThrow(() -> new ObjectNotFoundException("User Not found username:" + username)) ;
+    }
 }
