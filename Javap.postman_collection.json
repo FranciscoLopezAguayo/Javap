@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "e1b9911d-d556-47b7-8a42-3749de8520f1",
+		"name": "Javap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18967844"
+	},
+	"item": [
+		{
+			"name": "Products Paginado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmamxhMiIsImlhdCI6MTcwMzE5MDMwNCwiZXhwIjoxNzAzMTkyMTA0LCJyb2xlIjoiQVNTSVNUQU5UX0FETUlOSVNUUkFUT1IiLCJuYW1lIjoiZnJhbmNpc2NvIDIiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRF9BTExfUFJPRFVDVFMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfQ0FURUdPUklFUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlJFQURfTVlfUFJPRklMRSJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9BU1NJU1RBTlRfQURNSU5JU1RSQVRPUiJ9XX0.k43rmG9OkOZGEIEB2eJnm-AHn991zu3x01wAlOLx9MI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products?page=0&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category Paginado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/categories?page=0&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products(ID)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmamxhMiIsImlhdCI6MTcwMzE5MDMwNCwiZXhwIjoxNzAzMTkyMTA0LCJyb2xlIjoiQVNTSVNUQU5UX0FETUlOSVNUUkFUT1IiLCJuYW1lIjoiZnJhbmNpc2NvIDIiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRF9BTExfUFJPRFVDVFMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfQ0FURUdPUklFUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlJFQURfTVlfUFJPRklMRSJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9BU1NJU1RBTlRfQURNSU5JU1RSQVRPUiJ9XX0.k43rmG9OkOZGEIEB2eJnm-AHn991zu3x01wAlOLx9MI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products/5a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"5a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"194mailcl\",\r\n    \"name\":\"francisco lopez\",\r\n    \"username\":\"19401419-8_4\",\r\n    \"password\":\"123456789\",\r\n    \"repeatedPassword\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login auth/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"fjla\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login auth/authenticate CUSTOMER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"fjla1\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login auth/authenticate ASSISTANT_ADMINISTRATOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"fjla2\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login auth/authenticate ADMINISTRATOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"fjla3\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validar token auth/authenticate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"francisco lopez\",\r\n    \"username\":\"fjla\",\r\n    \"password\":\"123456789\",\r\n    \"repeatedPassword\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/validate-token?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9DVVNUT01FUiIsIm5hbWUiOiJmcmFuY2lzY28gbG9wZXoiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn1dLCJzdWIiOiJmamxhIiwiaWF0IjoxNzAyNTAwNTIwLCJleHAiOjE3MDI1MDIzMjB9.ryK6oCtWtoeS4K2W30-rfkKs5DqtRlEfB2sza5Jv6xY",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"validate-token"
+					],
+					"query": [
+						{
+							"key": "jwt",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9DVVNUT01FUiIsIm5hbWUiOiJmcmFuY2lzY28gbG9wZXoiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn1dLCJzdWIiOiJmamxhIiwiaWF0IjoxNzAyNTAwNTIwLCJleHAiOjE3MDI1MDIzMjB9.ryK6oCtWtoeS4K2W30-rfkKs5DqtRlEfB2sza5Jv6xY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmamxhMiIsImlhdCI6MTcwMzE4OTY1MiwiZXhwIjoxNzAzMTkxNDUyLCJyb2xlIjoiQVNTSVNUQU5UX0FETUlOSVNUUkFUT1IiLCJuYW1lIjoiZnJhbmNpc2NvIDIiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRF9BTExfUFJPRFVDVFMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfQ0FURUdPUklFUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlJFQURfTVlfUFJPRklMRSJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9BU1NJU1RBTlRfQURNSU5JU1RSQVRPUiJ9XX0.x1Tb9pTPfhuHmh8X4gjuYyZkUEBNJ4uZgF_vpetoXpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers 9191",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"usuario2\",\r\n    \"username\":\"useruser2\",\r\n    \"password\":\"123456789asd\",\r\n    \"repeatedPassword\":\"123456789asd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/api/v1/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmamxhMiIsImlhdCI6MTcwMzE4OTY1MiwiZXhwIjoxNzAzMTkxNDUyLCJyb2xlIjoiQVNTSVNUQU5UX0FETUlOSVNUUkFUT1IiLCJuYW1lIjoiZnJhbmNpc2NvIDIiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRF9BTExfUFJPRFVDVFMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfQ0FURUdPUklFUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlJFQURfTVlfUFJPRklMRSJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9BU1NJU1RBTlRfQURNSU5JU1RSQVRPUiJ9XX0.x1Tb9pTPfhuHmh8X4gjuYyZkUEBNJ4uZgF_vpetoXpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"SmartphoddfgF\",\r\n    \"price\": 966,\r\n    \"categoryId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Smartphone aifon\",\r\n    \"price\": 1500,\r\n    \"categoryId\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products Disable",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Smartphone xiaomi\",\r\n    \"price\": 1500,\r\n    \"categoryId\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products/13/disabled",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"13",
+						"disabled"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUsers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\":\"First\",\r\n    \"email\":\"someemail@someemailprovider.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/demo/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"demo",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
