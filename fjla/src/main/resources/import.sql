@@ -1,5 +1,17 @@
 
 
+SELECT * FROM javap._user_ order by id desc;
+SELECT * FROM javap.product;
+
+
+UPDATE javap._user_
+SET
+    role = 'ADMINISTRATOR'
+WHERE
+    username = 'fjlaTEST';
+
+
+
 INSERT INTO javap._user_ (username, name, password, role) VALUES ('fjla1', 'francisco 1', '$2a$10$DvucTCVLJL.JIok9H8QSTuqKtIBZWtAz7Du9YLc9lm1mDHcNum9FS', 'CUSTOMER');
 INSERT INTO javap._user_ (username, name, password, role) VALUES ('fjla2', 'francisco 2', '$2a$10$DvucTCVLJL.JIok9H8QSTuqKtIBZWtAz7Du9YLc9lm1mDHcNum9FS', 'ASSISTANT_ADMINISTRATOR');
 INSERT INTO javap._user_ (username, name, password, role) VALUES ('fjla3', 'francisco 3', '$2a$10$DvucTCVLJL.JIok9H8QSTuqKtIBZWtAz7Du9YLc9lm1mDHcNum9FS', 'ADMINISTRATOR');
