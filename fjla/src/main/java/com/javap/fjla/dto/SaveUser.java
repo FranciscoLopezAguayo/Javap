@@ -1,5 +1,6 @@
 package com.javap.fjla.dto;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -10,6 +11,10 @@ public class SaveUser implements Serializable {
     @Size(min = 4)
     private String name;
     private String username;
+
+    @Email(message = "Correo debe tener formato valido de email") // hay que buscar una expresion regular mejor porque (default) solo valida que haya un @ y no es suficiente
+    private String email;
+
     @Size(min = 8)
     private String password;
     @Size(min = 8)
@@ -47,4 +52,11 @@ public class SaveUser implements Serializable {
         this.repeatedPassword = repeatedPassword;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

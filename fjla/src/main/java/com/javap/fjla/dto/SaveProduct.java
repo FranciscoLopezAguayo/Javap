@@ -15,6 +15,9 @@ public class SaveProduct implements Serializable {
     @DecimalMin(value = "0.01")
     private BigDecimal price;
 
+    @DecimalMin(value = "0")
+    private int CurrentStock;
+
     @Min(value = 1)
     private Long categoryId;
 
@@ -42,4 +45,11 @@ public class SaveProduct implements Serializable {
         this.categoryId = categoryId;
     }
 
+    public int getCurrentStock() {
+        return CurrentStock;
+    }
+
+    public void setCurrentStock(int currentStock) {
+        CurrentStock = currentStock;
+    }
 }
