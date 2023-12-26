@@ -3,7 +3,7 @@
 INSERT INTO javap._user_ (username, name, password, role) VALUES ('fjla1', 'francisco 1', '$2a$10$DvucTCVLJL.JIok9H8QSTuqKtIBZWtAz7Du9YLc9lm1mDHcNum9FS', 'CUSTOMER');
 INSERT INTO javap._user_ (username, name, password, role) VALUES ('fjla2', 'francisco 2', '$2a$10$DvucTCVLJL.JIok9H8QSTuqKtIBZWtAz7Du9YLc9lm1mDHcNum9FS', 'ASSISTANT_ADMINISTRATOR');
 INSERT INTO javap._user_ (username, name, password, role) VALUES ('fjla3', 'francisco 3', '$2a$10$DvucTCVLJL.JIok9H8QSTuqKtIBZWtAz7Du9YLc9lm1mDHcNum9FS', 'ADMINISTRATOR');
-
+INSERT INTO javap._user_ (username, name, password, role) VALUES ('fjla4', 'francisco 4', '$2a$10$DvucTCVLJL.JIok9H8QSTuqKtIBZWtAz7Du9YLc9lm1mDHcNum9FS', 'SALES_PERSON');
 
 -- CREACIÓN DE CATEGORIAS
 INSERT INTO javap.category (name, status) VALUES ('Electrónica', 'ENABLED');

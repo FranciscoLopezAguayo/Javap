@@ -3,6 +3,7 @@ package com.javap.fjla.config.security;
 import com.javap.fjla.exception.ObjectNotFoundException;
 import com.javap.fjla.persistance.repository.UserRepository;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,12 @@ public class SecurityBeansInjector {
 
     //@Autowired
     //private AuthenticationConfiguration authenticationConfiguration;
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {

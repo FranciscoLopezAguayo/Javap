@@ -9,4 +9,5 @@ public interface UserService {
     User registrOneCustomer(SaveUser newUser);
 
     Optional<User> findOneByUsername(String username);
+
 }

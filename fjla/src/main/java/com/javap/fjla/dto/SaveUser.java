@@ -59,4 +59,15 @@ public class SaveUser implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "SaveUser{" +
+                "name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", repeatedPassword='" + repeatedPassword + '\'' +
+                '}';
+    }
 }

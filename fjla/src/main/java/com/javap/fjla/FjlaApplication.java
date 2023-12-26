@@ -8,5 +8,4 @@ public class FjlaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FjlaApplication.class, args);
 	}
-
 }

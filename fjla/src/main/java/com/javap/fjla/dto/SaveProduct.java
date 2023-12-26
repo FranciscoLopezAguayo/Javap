@@ -11,7 +11,6 @@ public class SaveProduct implements Serializable {
 
     @NotBlank
     private String name;
-
     @DecimalMin(value = "0.01")
     private BigDecimal price;
 
