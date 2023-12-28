@@ -63,6 +63,8 @@ public class HttpSecurityConfig {
                 .hasRole(Role.ADMINISTRATOR.name());
 
 
+
+
                     /*
                         autorización basado en coincidencias de solicitudes HTTP y permisos
                      * Autorizacion de enpoint de categories
@@ -83,12 +85,24 @@ public class HttpSecurityConfig {
                 .hasRole(Role.ADMINISTRATOR.name());
 
 
+
+        authReqConfig.requestMatchers(HttpMethod.POST,"/Sales")
+                .hasAnyRole(Role.ADMINISTRATOR.name(),Role.ASSISTANT_ADMINISTRATOR.name(),Role.SALES_PERSON.name());
+
+        authReqConfig.requestMatchers(HttpMethod.POST,"/TEST")
+                .hasAnyRole(Role.ADMINISTRATOR.name(),Role.ASSISTANT_ADMINISTRATOR.name(),Role.SALES_PERSON.name());
+
+
         authReqConfig.requestMatchers(HttpMethod.GET,"/auth/profile")
-                .hasAnyRole(Role.ADMINISTRATOR.name(),Role.ASSISTANT_ADMINISTRATOR.name(),Role.CUSTOMER.name());
+                .hasAnyRole(Role.ADMINISTRATOR.name(),Role.ASSISTANT_ADMINISTRATOR.name(),Role.CUSTOMER.name(),Role.SALES_PERSON.name());
+
+
 
 
         /* Autorizacion de endpoints publicos*/
         authReqConfig.requestMatchers(HttpMethod.POST, "/customers").permitAll();
+        //authReqConfig.requestMatchers(HttpMethod.POST, "/sale").permitAll();
+        //authReqConfig.requestMatchers(HttpMethod.POST, "/Test").permitAll();
         authReqConfig.requestMatchers(HttpMethod.POST, "/auth/authenticate").permitAll();
         authReqConfig.requestMatchers(HttpMethod.GET, "/auth/validate-token").permitAll();
 

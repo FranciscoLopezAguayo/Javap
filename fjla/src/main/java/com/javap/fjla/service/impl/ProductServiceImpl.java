@@ -36,6 +36,7 @@ public class ProductServiceImpl implements ProductService {
         product.setName(saveProduct.getName());
         product.setPrice(saveProduct.getPrice());
         product.setStatus(Product.ProductStatus.ENABLED);
+        product.setCurrentStock(saveProduct.getCurrentStock());
 
         Category category = new Category();
         category.setId(saveProduct.getCategoryId());
@@ -51,6 +52,7 @@ public class ProductServiceImpl implements ProductService {
 
         productFromDB.setName(saveProduct.getName());
         productFromDB.setPrice(saveProduct.getPrice());
+        productFromDB.setCurrentStock(saveProduct.getCurrentStock());
 
         Category category = new Category();
         category.setId(saveProduct.getCategoryId());

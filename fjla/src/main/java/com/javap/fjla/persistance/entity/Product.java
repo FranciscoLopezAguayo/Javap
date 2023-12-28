@@ -14,6 +14,8 @@ public class Product {
 
     private BigDecimal price;
 
+    private int CurrentStock;
+
     @Enumerated(EnumType.STRING)
     private ProductStatus status;
 
@@ -65,4 +67,11 @@ public class Product {
         this.category = category;
     }
 
+    public int getCurrentStock() {
+        return CurrentStock;
+    }
+
+    public void setCurrentStock(int currentStock) {
+        CurrentStock = currentStock;
+    }
 }

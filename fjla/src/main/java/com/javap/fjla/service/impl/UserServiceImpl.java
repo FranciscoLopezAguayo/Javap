@@ -32,6 +32,7 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(newUser.getPassword()));
         user.setUsername(newUser.getUsername());
         user.setName(newUser.getName());
+        user.setEmail(newUser.getEmail());
         user.setRole(Role.CUSTOMER);
 
         return userRepository.save(user);
@@ -41,6 +42,7 @@ public class UserServiceImpl implements UserService {
     public Optional<User> findOneByUsername(String username) {
         return userRepository.findByUsername(username);
     }
+
 
     private void validatePassword(SaveUser dto) {
 

@@ -22,7 +22,7 @@ public class User implements UserDetails {
     private String username;
     private String name;
     private String password;
-    private String Email;
+    private String email;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -103,11 +103,11 @@ public class User implements UserDetails {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public Role getRole() {
@@ -116,5 +116,16 @@ public class User implements UserDetails {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", role=" + role +
+                '}';
     }
 }

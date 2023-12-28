@@ -31,6 +31,11 @@ public enum Role {
     CUSTOMER(Arrays.asList(
             RolePermission.READ_MY_PROFILE
 
+    )),
+    SALES_PERSON(Arrays.asList(
+            RolePermission.SELL_PRODUCTS,
+            RolePermission.READ_MY_PROFILE
+
     ));
 
     private List<RolePermission> permissions;
