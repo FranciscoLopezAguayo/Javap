@@ -8,6 +8,7 @@ import com.javap.fjla.exception.ObjectNotFoundException;
 import com.javap.fjla.persistance.entity.User;
 import com.javap.fjla.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -86,6 +87,7 @@ public class AuthenticationService {
 
     }
 
+    @PreAuthorize("hasAuthority('READ_MY_PROFILE')")
     public User findLoggedInUser() {
 
         Authentication auth =
