@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { LoginService } from '../../services/auth/login.service';
+import { JWTResponse } from '../../services/auth/jwt';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +9,34 @@ import { Component } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit, OnDestroy{
+
+  userdata?:JWTResponse;
+  userLoginOn:boolean=false;
+  constructor(private loginService:LoginService){}
+
+  ngOnDestroy(): void {
+    this.loginService.currentUserData.unsubscribe();
+    this.loginService.currentUserLoginOn.unsubscribe();
+  }
+
+  ngOnInit(): void {
+    this.loginService.currentUserLoginOn.subscribe(
+      {
+        next:(userLoginOn) =>{
+          this.userLoginOn=userLoginOn;
+        }
+      }
+    );
+
+    this.loginService.currentUserData.subscribe(
+      {
+        next:(userdata) =>{
+          this.userdata=userdata;
+        }
+      }
+    )
+  }
+
 
 }

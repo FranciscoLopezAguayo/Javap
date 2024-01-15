@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -31,6 +32,7 @@ public class HttpSecurityConfig {
 
         SecurityFilterChain filterChain = http
                 .csrf( csrfConfig -> csrfConfig.disable() )
+                .cors(Customizer.withDefaults())//enable cors
                 .sessionManagement( sessMagConfig -> sessMagConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS) )
                 .authenticationProvider(daoAuthProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
@@ -49,8 +51,8 @@ public class HttpSecurityConfig {
         autorización basado en coincidencias de solicitudes HTTP y permisos
     * Autorizacion de enpoint de productos
     * */
-        authReqConfig.requestMatchers(HttpMethod.GET,"/products")
-                .hasAnyRole(Role.ADMINISTRATOR.name(),Role.ASSISTANT_ADMINISTRATOR.name());
+       /* authReqConfig.requestMatchers(HttpMethod.GET,"/products")
+                .hasAnyRole(Role.ADMINISTRATOR.name(),Role.ASSISTANT_ADMINISTRATOR.name()); */
 
         authReqConfig.requestMatchers(RegexRequestMatcher.regexMatcher(HttpMethod.GET, "/products/[0-9]*"))
         //authReqConfig.requestMatchers(HttpMethod.GET,"/products/{productId}")
@@ -115,6 +117,7 @@ public class HttpSecurityConfig {
     private static void buildRequestMatchersv2(AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry authReqConfig) {
 
         /* Autorizacion de endpoints publicos*/
+
         authReqConfig.requestMatchers(HttpMethod.POST, "/customers").permitAll();
         //authReqConfig.requestMatchers(HttpMethod.POST, "/sale").permitAll();
         //authReqConfig.requestMatchers(HttpMethod.POST, "/Test").permitAll();
