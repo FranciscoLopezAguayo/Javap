@@ -14,6 +14,15 @@ public class CorsConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**");// Enable CORS for the whole application.
+                //registry.addMapping("127.0.0.1/**");// Enable CORS for the whole application.
+
+
+                //http://localhost:4000"
+                //http://127.0.0.1:4000"
+
+                //http://localhost:3000"
+                //http://127.0.0.1:3000"
+
             }
         };
     }

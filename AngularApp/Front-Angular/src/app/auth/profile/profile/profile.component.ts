@@ -1,7 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProfileService } from '../../../services/auth/profile/profile.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { ProfileResponse } from '../../../services/auth/profile/profileResponse';
 
 @Component({
@@ -13,11 +13,15 @@ import { ProfileResponse } from '../../../services/auth/profile/profileResponse'
 })
 export class ProfileComponent {
 
-  public profileResponse$!: Observable<ProfileResponse>
+  public profileResponse$: Observable<ProfileResponse> | undefined
+
+  astring$: Observable<string> | undefined;
 
   constructor(private service: ProfileService){}
 
     ngOnInit(): void {
+      this.astring$ = of("Hello Observable!!!")
+      //this.profileResponse$ = this.service.getProgile();
       this.profileResponse$ = this.service.getProgile();
     }
   

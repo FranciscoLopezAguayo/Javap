@@ -16,19 +16,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/TEST")
 public class TestController {
-
-    @PostMapping("/transaccion")
-    public String guardarTransaccion(@RequestBody SaveSalesTransaction transaccion) {
-        System.out.println(" SaveSalesTransaction >>>"+ transaccion.getCustomer2());
-        // Tu lógica para guardar la transacción
-        return "Transacción guardada exitosamente";
-    }
-
-
     @GetMapping
     public ResponseEntity<String> obtenerString(){
         return ResponseEntity.ok("STRING DESDE EL BACKEND");
     }
-
 
 }

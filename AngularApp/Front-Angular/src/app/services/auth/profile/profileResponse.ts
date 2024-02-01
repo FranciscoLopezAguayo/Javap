@@ -5,10 +5,10 @@ export interface ProfileResponse{
     email:string,
     role:string,
     enabled:string,
-    authorities:authority[]
-   
+    authorities:authoritys[]
+    
 }
 
-export interface authority{
+export interface authoritys{
     authority: string
 }

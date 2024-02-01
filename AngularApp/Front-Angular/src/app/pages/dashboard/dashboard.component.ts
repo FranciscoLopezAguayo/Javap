@@ -13,6 +13,8 @@ export class DashboardComponent implements OnInit, OnDestroy{
 
   userdata?:JWTResponse;
   userLoginOn:boolean=false;
+
+  mostrarToken:string | undefined;
   constructor(private loginService:LoginService){}
 
   ngOnDestroy(): void {
@@ -21,6 +23,9 @@ export class DashboardComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit(): void {
+
+    this.mostrarToken = "";
+
     this.loginService.currentUserLoginOn.subscribe(
       {
         next:(userLoginOn) =>{
@@ -36,6 +41,10 @@ export class DashboardComponent implements OnInit, OnDestroy{
         }
       }
     )
+  }
+
+  get(){
+    return sessionStorage.getItem('token');
   }
 
 

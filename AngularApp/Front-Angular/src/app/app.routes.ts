@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './auth/profile/profile/profile.component';
+import { SessionStorageDemoComponent } from './pages/session-storage-demo/session-storage-demo.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -22,6 +23,10 @@ export const routes: Routes = [
     {
         path: 'profile', 
         component: ProfileComponent
+    },
+    {
+        path: 'SessionStorageDemo', 
+        component: SessionStorageDemoComponent
     },
     {
         path: 'not-found', 
