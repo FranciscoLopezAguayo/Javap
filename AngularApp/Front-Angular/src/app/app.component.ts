@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LoginComponent } from './auth/login/login.component';
-import { NavComponent } from './shared/nav/nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,12 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     // aqui importar el componente cuando se quiera usar el componente en el app principal
     CommonModule, 
-    RouterOutlet, 
-    HeaderComponent, 
-    FooterComponent, 
-    DashboardComponent, 
-    LoginComponent,
-    NavComponent
+    RouterOutlet
     ], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

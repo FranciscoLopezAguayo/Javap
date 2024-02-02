@@ -1,14 +1,18 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LoginComponent } from './auth/login/login.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ProfileComponent } from './auth/profile/profile/profile.component';
-import { SessionStorageDemoComponent } from './pages/session-storage-demo/session-storage-demo.component';
+import { RegisterComponent } from './register/register/register.component';
+import { LoginComponent } from './login/login/login.component';
 
 export const routes: Routes = [
-    {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
     {
+        path: 'register',
+        component: RegisterComponent,
+      },
+      {
+        path: 'login',
+        component: LoginComponent,
+      }
+   // {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+    /*{
         path: 'login', 
         component: LoginComponent
     },
@@ -31,7 +35,7 @@ export const routes: Routes = [
     {
         path: 'not-found', 
         component: NotFoundComponent
-    },
-    {path: '**', redirectTo: '/not-found'}
+    },*/
+   // {path: '**', redirectTo: '/not-found'}
     
 ];

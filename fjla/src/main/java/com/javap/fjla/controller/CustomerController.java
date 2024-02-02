@@ -24,6 +24,7 @@ public class CustomerController {
     @PreAuthorize("permitAll")
     @PostMapping
     public ResponseEntity<RegisteredUser> registerOne(@RequestBody @Valid SaveUser newUser){
+        System.out.println(newUser);
         RegisteredUser registeredUser = authenticationService.registerOneCustomer(newUser);
         return ResponseEntity.status(HttpStatus.CREATED).body(registeredUser);
 
