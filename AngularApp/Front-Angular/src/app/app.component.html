@@ -1,12 +1,47 @@
 
-<a routerLink="/login">login</a>
-<br>
-<a routerLink="/register">Register</a>
+
+
+<ul class="nav navbar-nav item">
+    <li>
+      <a routerLink='/home' routerLinkActive="active">Home</a>
+    </li>
+    <li>
+      <a routerLink='/about' routerLinkActive="active">About this</a>
+    </li>
+</ul>
+
+
+<ul class="nav navbar-nav item">
+
+@if (authService.TokenSig === null) {
+
+    <li>
+        <a routerLink='/login' routerLinkActive="active">login</a>
+      </li>
+      <li>
+        <a routerLink='/register' routerLinkActive="active">register</a>
+      </li>
+
+  } 
+  @else {
+
+    <a href="/login" >
+        <button type="button" class="btn btn-info">login Button link</button>
+      </a>  
+      
+    <h1>{{ authService.JWTResponseSig()?.jwt  }}</h1>
+
+
+
+    <span (click)="logout()" >Logout</span>
+
+  } 
+
+</ul>
 
 <router-outlet></router-outlet>
     
     
-   
 
 
 
