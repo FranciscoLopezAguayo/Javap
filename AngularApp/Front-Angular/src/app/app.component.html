@@ -1,19 +1,14 @@
 
 
-
-<ul class="nav navbar-nav item">
-    <li>
-      <a routerLink='/home' routerLinkActive="active">Home</a>
-    </li>
-    <li>
-      <a routerLink='/about' routerLinkActive="active">About this</a>
-    </li>
-</ul>
-
-
-<ul class="nav navbar-nav item">
-
 @if (authService.TokenSig === null) {
+
+  <a href="/login" >
+    <button type="button" class="btn btn-info">login</button>
+  </a> 
+
+  <a href="/register" >
+    <button type="button" class="btn btn-info">register</button>
+  </a> 
 
     <li>
         <a routerLink='/login' routerLinkActive="active">login</a>
@@ -26,8 +21,8 @@
   @else {
 
     <a href="/login" >
-        <button type="button" class="btn btn-info">login Button link</button>
-      </a>  
+      <button type="button" class="btn btn-info" (click)="logout()">login Button link</button>
+    </a>  
       
     <h1>{{ authService.JWTResponseSig()?.jwt  }}</h1>
 
@@ -37,7 +32,7 @@
 
   } 
 
-</ul>
+
 
 <router-outlet></router-outlet>
     
